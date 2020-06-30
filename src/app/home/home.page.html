@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+    <div class="head">
+        <ion-title class="main-title">
+            Liste
+        </ion-title>
+    </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <input class="input" [(ngModel)]="item"/>
+    <div class="ion-padding">
+        <ion-button color="gold" expand="block" type="submit" class="ion-no-margin" (click)="submit()">Ajouter</ion-button>
+    </div>
+
+    <ion-list class="list">
+        <ion-card class="card" *ngFor="let item of items; let i = index" [ngStyle]="{'border-color': item.color}">
+            <div class="text">
+                <div class="title">{{item.name}}</div>
+            </div>
+            <div class="btn-container">
+                <svg (click)="delete(i)" class="btn" width="42" height="42" viewBox="0 0 42 42">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #fff;
+                            }
+
+                            .cls-1, .cls-2 {
+                                stroke: #f84f4f;
+                                stroke-width: 2px;
+                            }
+
+                            .cls-2, .cls-4 {
+                                fill: none;
+                            }
+
+                            .cls-3 {
+                                stroke: none;
+                            }
+
+                            .cls-5 {
+                                filter: url(#Ellipse_5);
+                            }
+                        </style>
+                        <filter id="Ellipse_5" x="0" y="0" width="42" height="42" filterUnits="userSpaceOnUse">
+                            <feOffset input="SourceAlpha"/>
+                            <feGaussianBlur stdDeviation="3" result="blur"/>
+                            <feFlood flood-opacity="0.102"/>
+                            <feComposite operator="in" in2="blur"/>
+                            <feComposite in="SourceGraphic"/>
+                        </filter>
+                    </defs>
+                    <g id="Groupe_346" data-name="Groupe 346" transform="translate(-768 -328)">
+                        <g class="cls-5" transform="matrix(1, 0, 0, 1, 768, 328)">
+                            <g id="Ellipse_5-2" data-name="Ellipse 5" class="cls-1" transform="translate(9 9)">
+                                <circle class="cls-3" cx="12" cy="12" r="12"/>
+                                <circle class="cls-4" cx="12" cy="12" r="11"/>
+                            </g>
+                        </g>
+                        <g id="Groupe_82" data-name="Groupe 82" transform="translate(789.094 335.941) rotate(45)">
+                            <line id="Ligne_1" data-name="Ligne 1" class="cls-2" y2="18.128" transform="translate(9.064 0)"/>
+                            <line id="Ligne_2" data-name="Ligne 2" class="cls-2" y2="18.128" transform="translate(18.128 9.064) rotate(90)"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </ion-card>
+    </ion-list>
+</ion-content>
