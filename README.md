@@ -2,6 +2,8 @@
 
 > Perso / Angular - Ionic
 
+![ShoppingList](https://user-images.githubusercontent.com/55408621/86142812-eb8e1d00-baf3-11ea-9139-e06faf16e1a2.jpg)
+
 ---
 
 ## Installation
